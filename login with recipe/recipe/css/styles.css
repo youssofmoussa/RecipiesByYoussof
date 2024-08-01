@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+    font-family: "Fredoka One", cursive;
+    margin: 0;
+    padding: 0;
+    background: url(/assets/Purple\ Illustrated\ Mountain\ Desktop\ Wallpaper.png);
+    animation: gradient  10s ease-in-out infinite
+}
+
+header {
+    
+    color: #fff;
+    padding: 60px;
+    text-align: center;
+    
+}
+
+header h1 {
+    margin: 0;
+    font-size: 4em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 2em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-out;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 500px;
+}
+
+.search input {
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    width: 700px;
+    transition: all 0.3s ease;
+}
+
+.search input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.search button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 70px;
+    transition: all 0.3s ease;
+}
+
+.search button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: scale(1.05);
+}
+
+.recipes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.recipe {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    animation: flyInUp 0.6s ease-out;
+}
+
+.recipe:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    background-color: #f8f9fa;
+}
+
+.recipe img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe img:hover {
+    transform: scale(1.02);
+}
+
+.recipe h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #343a40;
+}
+
+.recipe p {
+    font-size: 0.9em;
+    color: #495057;
+}
+
+.recipe-detail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.recipe-detail.visible {
+    opacity: 1;
+}
+
+.recipe-detail.hidden {
+    display: none;
+}
+
+.recipe-detail #recipeContent {
+    background: #343a40;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    animation: zoomIn 0.5s ease-out;
+}
+
+.recipe-detail img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.recipe-detail h2 {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.recipe-detail p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.close-btn:hover {
+    background: #c82333;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flyInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .search-container {
+        padding: 10px;
+    }
+
+    .search input {
+        font-size: 1.1em;
+    }
+
+    .search button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .recipe {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; /* Add some padding to avoid elements sticking to the edges */
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: 500px; /* Adjust max-width for smaller screens */
+        box-sizing: border-box;
+        padding: 10px; /* Ensure padding is consistent */
+    }
+
+    .search input {
+        width: calc(100% - 100px); /* Adjust width to account for button and margins */
+        font-size: 1.1em;
+    }
+
+    .search button {
+        width: 100px; /* Set a fixed width for the button */
+        font-size: 0.9em;
+        margin: 10px 0; /* Margin top and bottom to separate from input */
+    }
+
+    .recipes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipe {
+        max-width: 100%;
+    }
+
+    .recipe-detail #recipeContent {
+        width: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    .search-container {
+        max-width: 100%; /* Ensure it doesn’t exceed the viewport width */
+    }
+
+    .search input {
+        font-size: 1em;
+    }
+
+    .search button {
+        width: 100px; /* Ensure button width is consistent */
+    }
+}
+
+
+/* Apply styles to the scrollbar */
+::-webkit-scrollbar {
+  width: 20px; /* Adjust the width of the scrollbar */
+
+}
+
+/* Track (part of the scrollbar that is always visible) */
+::-webkit-scrollbar-track {
+  background: #070b30; /* Background color of the track */
+   /* Rounded corners for the track */
+}
+
+/* Handle (part of the scrollbar that you drag) */
+::-webkit-scrollbar-thumb {
+    
+  background-color: aqua; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  transition: background 0.3s ease; /* Smooth transition effect */
+}
+
+
+

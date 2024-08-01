@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Recipe Finder</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  
+    <header>
+        <h1>Find Recipes With Youssof</h1>
+        <p>Discover amazing recipes with a simple search</p>
+    </header>
+
+    <main>
+        <section class="search">
+            <div class="search-container">
+                <input type="text" id="recipeSearch" placeholder="Search for recipes...">
+                <button id="searchButton">Search</button>
+            </div>
+        </section>
+
+        <section id="recipes" class="recipes">
+            <!-- Recipes will be displayed here -->
+        </section>
+
+        <!-- Detailed Recipe View -->
+        <section id="recipeDetail" class="recipe-detail hidden">
+            <button id="closeDetail" class="close-btn">❌</button>
+            <div id="recipeContent"></div>
+        </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

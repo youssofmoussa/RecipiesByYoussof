@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign-Up Forms</title>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="screen-1" id="main">
+        <div class="email">
+            <label for="login-email">Email Address</label>
+            <div class="sec-2">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" id="login-email" name="login-email" placeholder="Username@gmail.com"/>
+            </div>
+        </div>
+        <div class="password">
+            <label for="login-password">Password</label>
+            <div class="sec-2">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input class="pas" type="password" id="login-password" name="login-password" placeholder="············"/>
+                <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+            </div>
+        </div>
+        <button class="login" id="submit">Login</button>
+        <button id="sign-up" class="login">Sign Up</button>
+        <center><div class="footer">
+            <span class="forgot-password">Forgot Password?</span>
+        </div></center>
+    </div>
+
+    <div class="screen-1" id="create-acct" style="display: none;">
+        <div class="email">
+            <label for="username">Username</label>
+            <div class="sec-2">
+                <ion-icon name="person-outline"></ion-icon>
+                <input type="text" id="username" name="username" placeholder="Your Username"/>
+            </div>
+        </div> <br>
+        <div class="email">
+            <label for="signup-email">Email Address</label>
+            <div class="sec-2">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" id="signup-email" name="signup-email" placeholder="Username@gmail.com"/>
+            </div>
+        </div> <br>
+        <div class="email">
+            <label for="confirm-email">Confirm Email</label>
+            <div class="sec-2">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" id="confirm-email" name="confirm-email" placeholder="Confirm Email"/>
+            </div>
+        </div> <br>
+        <div class="password">
+            <label for="signup-password">Password</label>
+            <div class="sec-2">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input class="pas" type="password" id="signup-password" name="signup-password" placeholder="············"/>
+                <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+            </div>
+        </div> <br>
+        <div class="password">
+            <label for="confirm-password">Confirm Password</label>
+            <div class="sec-2">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input class="pas" type="password" id="confirm-password" name="confirm-password" placeholder="············"/>
+                <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+            </div>
+        </div> <br>
+        <button class="login" id="create-acct-btn">Sign Up</button>
+        <br>
+        <center>
+            <div class="footer">
+            <span id="return-btn" class="btn-link">Back to Login</span>
+        </div>
+        </center>
+    </div>
+
+    <div id="notification" class="notification"></div>
+    <script type="module" src="../js/script.js"></script>
+</body>
+</html>
